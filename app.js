@@ -1,4 +1,4 @@
-// Simple script for navigation and character rendering
+// Navigation and character rendering with images
 
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('nav a');
@@ -14,20 +14,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
       document.getElementById(target).classList.add('active');
       link.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 
   const characters = [
-    { name: 'Ken Kaneki', description: 'A shy student who becomes a half-ghoul after an encounter with Rize.' },
-    { name: 'Touka Kirishima', description: 'A ghoul who tries to live a normal life while working at Anteiku.' },
-    { name: 'Kishou Arima', description: 'Legendary Ghoul Investigator known as the Reaper.' }
+    {
+      name: 'Ken Kaneki',
+      description: 'A shy student who becomes a half-ghoul after an encounter with Rize.',
+      img: 'https://en.wikipedia.org/wiki/Special:FilePath/Ken_Kaneki.png'
+    },
+    {
+      name: 'Touka Kirishima',
+      description: 'A ghoul who tries to live a normal life while working at Anteiku.',
+      img: 'https://en.wikipedia.org/wiki/Special:FilePath/Touka_Kirishima.png'
+    },
+    {
+      name: 'Kishou Arima',
+      description: 'Legendary Ghoul Investigator known as the Reaper.',
+      img: 'https://en.wikipedia.org/wiki/Special:FilePath/Kishou_Arima.png'
+    }
   ];
 
   const list = document.getElementById('character-list');
   characters.forEach(char => {
-    const container = document.createElement('div');
-    container.className = 'character';
-    container.innerHTML = `<h3>${char.name}</h3><p>${char.description}</p>`;
-    list.appendChild(container);
+    const card = document.createElement('div');
+    card.className = 'character-card';
+    card.innerHTML = `
+      <img src="${char.img}" alt="${char.name}">
+      <h3>${char.name}</h3>
+      <p>${char.description}</p>
+    `;
+    list.appendChild(card);
   });
 });
