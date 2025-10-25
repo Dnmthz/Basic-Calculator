@@ -1,65 +1,110 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    block-size: 100vh;
-    background-color: rgb(51, 84, 84);
+  margin: 0;
+  font-family: 'Roboto Condensed', Arial, Helvetica, sans-serif;
+  background-color: #111;
+  color: #eee;
+  line-height: 1.6;
 }
 
-.Calculator {
-    background-color: rgb(211, 211, 211);
-    padding: 20px;
-    border-radius: 10px;
+.hero {
+  background-image: url('https://en.wikipedia.org/wiki/Special:FilePath/TokyoGhoul.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.screen {
-    inline-size: 224px;
-    background-color: rgb(176, 205, 176);
-    font-size: 40px;
-    text-align: end;
-    padding: 4px;
-    overflow: scroll;
+.hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem;
+  border-radius: 8px;
 }
 
-.buttons {
-    width: 232px;
-    display: flex;
-    flex-wrap: wrap;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  padding: 0;
+  margin: 1rem 0 0;
 }
 
-button {
-    background-color: rgb(131, 129, 129);
-    border: none;
-    color: rgb(255, 255, 255);
-    font-size: 40px;
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
-    margin: 4px;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-button:hover {
-    background-color: rgb(111, 110, 100);
+nav a.active,
+nav a:hover {
+  text-decoration: underline;
 }
 
-button:active {
-    background-color: rgb(232, 232, 232);
+main {
+  padding: 2rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-#equals {
-    background-color: rgb(218, 2, 2);
+section {
+  display: none;
 }
 
-#equals:hover {
-    background-color: rgb(198, 1, 1);
+section.active {
+  display: block;
 }
 
-#clear {
-    width: 100%;
-    background-color: rgb(252, 226, 27);
-    font-size: 30px;    
-}    
+#character-list.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
 
-#clear:hover {
-    background-color: rgb(252, 201, 17);
+.character-card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.character-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.character-card h3 {
+  margin: 0.5rem 0 0;
+}
+
+.character-card p {
+  padding: 0 1rem 1rem;
+  margin: 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
 }

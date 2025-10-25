@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">        
-        <title>JS Calculator</title>
-        <link rel="stylesheet" href="styles.css"/>
-    </head>
-    <body>
-
-        <div class="Calculator">
-            <div class="screen">.</div>
-            <br/>
-            <div class="buttons">
-                <button>7</button>
-                <button>8</button>
-                <button>9</button>
-                <button>+</button>
-                <button>4</button>
-                <button>6</button>
-                <button>6</button>
-                <button>-</button>
-                <button>1</button>
-                <button>2</button>
-                <button>3</button>
-                <button>*</button>
-                <button>0</button>
-                <button>.</button>
-                <button>/</button>
-                <button id="equals">=</button>
-            </div>
-
-            <br/>
-            
-            <button id="clear">CLEAR</button>
-        
-        </div>
-
-            
-        <script src="app.js"></script>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tokyo Ghoul Fanpage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Tokyo Ghoul Fanpage</h1>
+      <nav>
+        <ul>
+          <li><a href="#" data-section="home" class="active">Home</a></li>
+          <li><a href="#" data-section="characters">Characters</a></li>
+          <li><a href="#" data-section="gallery">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section id="home" class="active">
+      <h2>Welcome</h2>
+      <p><em>Tokyo Ghoul</em> is a dark fantasy manga created by Sui Ishida. Dive into the complex world of ghouls, humans, and everything in between.</p>
+    </section>
+    <section id="characters">
+      <h2>Main Characters</h2>
+      <div id="character-list" class="cards"></div>
+    </section>
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <div class="gallery">
+        <img src="https://en.wikipedia.org/wiki/Special:FilePath/TokyoGhoul.jpg" alt="Tokyo Ghoul Volume 1">
+        <img src="https://en.wikipedia.org/wiki/Special:FilePath/Tokyo_Ghoul_Vol_2.jpg" alt="Tokyo Ghoul Volume 2">
+        <img src="https://en.wikipedia.org/wiki/Special:FilePath/Tokyo_Ghoul_Vol_3.jpg" alt="Tokyo Ghoul Volume 3">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Unofficial fanpage for entertainment purposes only. Images used belong to their respective owners.</p>
+  </footer>
+  <script src="app.js"></script>
+</body>
 </html>
